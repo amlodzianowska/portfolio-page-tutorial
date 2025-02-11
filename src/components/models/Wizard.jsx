@@ -2,10 +2,13 @@
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
-  const { nodes, materials } = useGLTF('/wizard.glb')
+export default function Wizard(props) {
+  const { nodes, materials } = useGLTF('/models/wizard.glb')
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null}
+    position={[0, -1.5, 0]}
+    scale={[0.06, 0.06, 0.06]}
+    rotation={[0.25, 0, 0]}>
       <mesh geometry={nodes.Evil_Hathattty_mesh_Evil_HatBLN_Hat_0.geometry} material={materials.Evil_HatBLN_Hat} position={[-1.057, 0, 0]} rotation={[0, 0.224, 0]} scale={0.832} />
       <mesh geometry={nodes.WandpCylinder1_Wandq_0.geometry} material={materials.PaletteMaterial001} position={[-1.057, 0, 0]} rotation={[0, 0.224, 0]} scale={0.832} />
       <mesh geometry={nodes.R_shoe_tongue_mesh_BLN_Shoe_tongue_0.geometry} material={materials.BLN_Shoe_tongue} position={[-1.057, 0, 0]} rotation={[0, 0.224, 0]} scale={0.832} />
@@ -30,4 +33,4 @@ export function Model(props) {
   )
 }
 
-useGLTF.preload('/wizard.glb')
+useGLTF.preload('/models/wizard.glb')
