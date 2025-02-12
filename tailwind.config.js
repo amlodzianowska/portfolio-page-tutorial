@@ -22,8 +22,15 @@ module.exports = {
         'glass-inset': 'inset 0 17px 5px -9px rgba(254, 254, 91, 0.05)',
         'glass-sm': '5px 5px 20px 0 rgba(254, 254, 91, 0.03)'
       },
+      keyframes: {
+        'spin-reverse': {
+          '0%': {transform: 'rotate(0deg)'},
+          '100%': {transform: 'rotate(-360deg)'}
+        }
+      },
       animation: {
-        'spin-slow': 'spin 40s linear infinite'
+        'spin-slow': 'spin 50s linear infinite',
+        'spin-slow-reverse': 'spin-reverse 50s linear infinite'
       }
     },
   },
