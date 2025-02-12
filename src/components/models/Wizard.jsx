@@ -1,11 +1,18 @@
 "use client"
 import React, { useRef } from 'react'
+import { useFrame } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 
 export default function Wizard(props) {
   const { nodes, materials } = useGLTF('/models/wizard.glb')
+  const modelRef = useRef();
+  useFrame((state, delta, xFrame) => {
+    modelRef.current.position.y = -1.5 + (Math.sin(state.clock.elapsedTime))/8;
+  })
+
   return (
     <group {...props} dispose={null}
+    ref = {modelRef}
     position={[0, -1.5, 0]}
     scale={[0.06, 0.06, 0.06]}
     rotation={[0.25, 0, 0]}>
