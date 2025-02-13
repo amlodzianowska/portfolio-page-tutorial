@@ -16,7 +16,7 @@ function FireFliesBackground() {
       const newFirefly = createFireFly();
       setFireFlies(currentFireflies => 
         [
-          ...currentFireflies,
+          ...currentFireflies.slice(-14),
           newFirefly
         ]
       );
@@ -32,7 +32,7 @@ function FireFliesBackground() {
         fireFiles.map((firefly) => {
           return <div 
           key={firefly.id} 
-          className='absolute rounded-full bg-accent w-[20px] h-[20px]' 
+          className='absolute rounded-full w-[10px] h-[10px] bg-firefly-radial' 
           style={{top: firefly.top, left: firefly.left, animation: `move ${firefly.animationDuration} infinite alternate`}}></div>
         })
       }
