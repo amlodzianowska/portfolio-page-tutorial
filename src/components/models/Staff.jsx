@@ -7,7 +7,7 @@ export default function Staff(props) {
   const { nodes, materials } = useGLTF('/models/staff.glb')
   const modelRef = useRef();
   useFrame((state, delta, xFrame) => {
-    modelRef.current.position.y = -1.5 + (Math.sin(state.clock.elapsedTime))/8;
+    modelRef.current.rotation.y += 0.006;
   });
 
   return (
