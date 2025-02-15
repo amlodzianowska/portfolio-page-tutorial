@@ -10,9 +10,11 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between relative">
       <Image src={bg} alt="background-image" fill className="w-full h-full object-cover object-center opacity-25"/>
       <ProjectsList projects={projectsData}></ProjectsList>
-      <RenderModel>
-        <Staff/>
-      </RenderModel>
+      <div className="flex items-center justify-center fixed top-20 left-0 h-screen">
+        <RenderModel>
+          <Staff/>
+        </RenderModel>
+      </div>
     </main>
   );
 }
