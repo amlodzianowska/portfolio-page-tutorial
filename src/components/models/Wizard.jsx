@@ -8,10 +8,11 @@ export default function Wizard(props) {
   const modelRef = useRef();
   useFrame((state, delta, xFrame) => {
     modelRef.current.position.y = -1.5 + (Math.sin(state.clock.elapsedTime))/8;
-  })
+  });
 
   return (
-    <group {...props} dispose={null}
+    <group {...props} 
+    dispose={null}
     ref = {modelRef}
     position={[0, -1.5, 0]}
     scale={[0.06, 0.06, 0.06]}
