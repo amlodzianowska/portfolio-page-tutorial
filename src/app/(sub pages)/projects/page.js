@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Image src={bg} alt="background-image" className="-z-50 w-full fixed top-0 left-0 h-full object-cover object-center opacity-25"/>
       <ProjectsList projects={projectsData}></ProjectsList>
-      <div className="flex items-center justify-center fixed top-20 -left-16 h-screen">
+      <div className="flex items-center justify-center fixed top-20 -left-16 h-screen w-screen-20">
         <RenderModel>
           <Staff/>
         </RenderModel>

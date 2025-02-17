@@ -9,6 +9,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        "screen-20": "20vw",
+        "screen-20h": "20vh",
+      },
       fontFamily: {
         inter: ['var(--font-inter)']
       },

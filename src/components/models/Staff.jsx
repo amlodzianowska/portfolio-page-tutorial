@@ -13,8 +13,8 @@ export default function Staff(props) {
   return (
     <group {...props} dispose={null}
     ref = {modelRef}
-    position={[1, -1, 1]}
-    scale={[10, 10, 10]}>
+    position={[0.15, -1.5, 1]}
+    scale={[2.3, 2.3, 2.3]}>
       <mesh geometry={nodes.Wizard_Staff3_Wizard_Staff3_0.geometry} material={materials.Wizard_Staff3} position={[-0.041, 0.983, 0.768]} rotation={[0, Math.PI / 2, 0]} scale={0.04} />
       <mesh geometry={nodes.Wizard_Staff2_Wizard_Staff2_0.geometry} material={materials.Wizard_Staff2} position={[-0.041, 0.983, 0.768]} rotation={[0, Math.PI / 2, 0]} scale={0.04} />
     </group>
