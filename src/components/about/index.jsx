@@ -29,6 +29,9 @@ function AboutDetails() {
                     4+ <sub cassName="font-semibold text-base">years of experience</sub>
                 </p>
             </ItemLayout>
+            <ItemLayout className={"col-span-4 !p-0"}>
+                <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api/top-langs/?username=codebucks27&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false" alt="github stats" loading="lazy" />
+            </ItemLayout>
             <ItemLayout className={"col-span-8 !p-0"}>
                 <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api?username=codebucks27&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false" alt="github stats" loading="lazy" />
             </ItemLayout>
