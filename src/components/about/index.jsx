@@ -30,16 +30,19 @@ function AboutDetails() {
                 </p>
             </ItemLayout>
             <ItemLayout className={"col-span-4 !p-0"}>
-                <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api/top-langs/?username=codebucks27&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false" alt="github stats" loading="lazy" />
+                <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api/top-langs/?username=amlodzianowska&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false" alt="github stats" loading="lazy" />
             </ItemLayout>
             <ItemLayout className={"col-span-8 !p-0"}>
-                <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api?username=codebucks27&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false" alt="github stats" loading="lazy" />
+                <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api?username=amlodzianowska&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false" alt="github stats" loading="lazy" />
             </ItemLayout>
             <ItemLayout className={"col-span-full !p-0"}>
                 <img className="w-full h-auto" src="https://skillicons.dev/icons?i=html,css,cs,dotnet,git,github,graphql,mongodb,mysql,postgres,postman,jquery,jest,python,js,ts,react,nextjs,nodejs,cypress,docker,aws,arduino,autocad,blender,rider,terraform,treejs" alt="known technologies icons" loading="lazy" />
             </ItemLayout>
             <ItemLayout className={"col-span-6 !p-0"}>
-                <img className="w-full h-auto" src="https://github-readme-streak-stats.herokuapp.com?user=codebucks27&theme=dark&hide_border=true&background=EB545400&ring=FEFE5B&currStreakLabel=FEFE5B" alt="github streak" loading="lazy" />
+                <img className="w-full h-auto" src="https://github-readme-streak-stats.herokuapp.com?user=anuraghazra&theme=dark&hide_border=true&background=EB545400&ring=FEFE5B&currStreakLabel=FEFE5B" alt="github streak" loading="lazy" />
+            </ItemLayout>
+            <ItemLayout className={"col-span-6 !p-0"}>
+                <img className="w-full h-auto" src="https://github-readme-stats.vercel.app/api/gist?id=bbfce31e0217a3689c8d961a356cb10d&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false&description_lines_count=2" alt="pinned repo" loading="lazy" />
             </ItemLayout>
         </div>
     </section>
