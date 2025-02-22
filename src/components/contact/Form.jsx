@@ -14,10 +14,11 @@ export default function Form() {
       className="w-full p-3 rounded-md shadow-ld text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg"/>
       <input type="text" placeholder="email" {...register("email", {required: true, pattern: /^\S+@\S+$/i})} 
       className="w-full p-3 rounded-md shadow-ld text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg"/>
-      <textarea {...register("message", {required: true, max: 256, min: 50})} 
+      <textarea placeholder="message" {...register("message", {required: true, max: 256, min: 50})} 
       className="w-full p-3 rounded-md shadow-ld text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg"/>
 
-      <input type="submit" />
+      <input value="Cast Your Message!"
+       className="px-10 py-4 rounded-md shadow-lg bg-background border border-accent/30 border-solid hover:shadow-glass-sm backdrop-blur-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer capitalize" type="submit" />
     </form>
   );
 }
