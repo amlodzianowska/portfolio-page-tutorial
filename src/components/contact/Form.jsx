@@ -1,11 +1,44 @@
 "use client";
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import emailjs from '@emailjs/browser';
 
 export default function Form() {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
-  console.log(errors);
+
+  const sendEmail = (params) => {
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_SERVICE_ID, 
+        process.env.NEXT_PUBLIC_TEMPLATE_ID, 
+        params,
+        {
+          publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+          limitRate: {
+            throttle: 10000, // can't send more than 1 email per 5 seconds
+          }
+        }
+      )
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+  const onSubmit = data => {
+    const templateParams = {
+      to_name: "CodeBucks",
+      from_name: data.name,
+      reply_to: data.email,
+      message: data.message
+    }
+    sendEmail(templateParams)
+  }
+
   
   return (
     <form onSubmit={handleSubmit(onSubmit)}
