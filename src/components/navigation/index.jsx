@@ -17,7 +17,7 @@ function Navigation() {
             <ResponsiveComponent>
                 {({size}) => {
                     return size && size >= 480 ?
-                    <div className="w-max flex items-center justify-center relative group">
+                    <div className="w-max flex items-center justify-center relative group hover:pause animate-spin-slow">
                         {
                             BtnList.map((btn, index) => {
                                 const angleRad = (index*angleIncrement*Math.PI)/180;
