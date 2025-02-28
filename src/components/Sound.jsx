@@ -1,19 +1,21 @@
 "use client"
 import React from 'react'
 import { Volume2, VolumeX } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 export const Sound = () => {
+    const audioRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
     const toggle = () => {
         setIsPlaying(!isPlaying)
+        !isPlaying ? audioRef.current.play() : audioRef.current.pause();
     }
 
     return (
         <div className="fixed top-4 right-2.5 xs:right-4 z-50 group">
-            <audio loop>
-                <source src={"/public/audio/birds39-forest-20772.mp3"} type="audio/mpeg"/>
+            <audio loop ref={audioRef}>
+                <source src={"/audio/birds39-forest-20772.mp3"} type="audio/mpeg"/>
                 Your browser does not support the audio element.
             </audio>
             <button 
