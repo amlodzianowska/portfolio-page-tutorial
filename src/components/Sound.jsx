@@ -1,15 +1,41 @@
 "use client"
 import React from 'react'
 import { Volume2, VolumeX } from 'lucide-react'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 export const Sound = () => {
     const audioRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
+    const handleFirstUserInteraction = () => {
+        const consent = localStorage.getItem("musicConsent");
+        if (consent === "true" && !isPlaying) {
+            audioRef.current.play();
+            setIsPlaying(true);
+        }
+        ["click", "keydown", "touchstart"].forEach((event) => {
+            document.removeEventListener(event, handleFirstUserInteraction) 
+        });
+    }
+
+    useEffect(() => {
+      const consent = localStorage.getItem("musicConsent");
+
+      if (consent) {
+        setIsPlaying(consent === "true");
+        if (consent === "true") {
+            ["click", "keydown", "touchstart"].forEach((event) => {
+                document.addEventListener(event, handleFirstUserInteraction)
+            })
+        }
+      }
+    }, []);
+    
 
     const toggle = () => {
-        setIsPlaying(!isPlaying)
-        !isPlaying ? audioRef.current.play() : audioRef.current.pause();
+        const newState = !isPlaying;
+        setIsPlaying(newState)
+        newState ? audioRef.current.play() : audioRef.current.pause();
+        localStorage.setItem("musicConsent", String(newState));
     }
 
     return (
