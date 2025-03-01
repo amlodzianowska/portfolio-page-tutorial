@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html className="overflow-y-scroll scrollbar-thin scrollbar-track-background scrollbar-thumb-accent" lang="en">
       <body className={clsx(inter.variable, 'bg-background text-foreground font-inter')}>
         {children}
         <FireFliesBackground />

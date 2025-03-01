@@ -20,6 +20,7 @@
     "react-dom": "^18",
     "react-hook-form": "^7.51.0",
     "sonner": "^1.4.3",
+    "tailwind-scrollbar": "^3.1.0",
     "three": "^0.162.0"
   },
   "devDependencies": {
